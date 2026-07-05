@@ -1,12 +1,12 @@
+
 [phases.setup]
-nixPkgs = ["python3", "python3Packages.pip", "zlib", "libjpeg", "libpng", "freetype", "gcc"]
+nixPkgs = ["python3", "zlib", "libjpeg", "libpng", "freetype"]
 
 [phases.install]
 cmds = [
-  "pip install --upgrade pip",
-  "pip install Pillow==10.3.0",
-  "pip install pyTelegramBotAPI==4.21.0",
-  "pip install requests==2.31.0"
+  "pip install --break-system-packages Pillow==10.3.0",
+  "pip install --break-system-packages pyTelegramBotAPI==4.21.0",
+  "pip install --break-system-packages requests==2.31.0"
 ]
 
 [start]
